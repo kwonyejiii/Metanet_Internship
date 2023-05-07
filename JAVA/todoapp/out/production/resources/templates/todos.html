@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Todo App</h2>
+<form method="post" action="/addTodo">
+    <input type="text" name="todo"/>
+    <input type="submit" value="Add todo"/>
+</form>
+<hr>
+<ul>
+
+
+    <li th:each="todo : ${todos}">    ${todo} 목록에서 하나씩 꺼낸게 todo
+<!--        출력-->
+        <span th:text="${todo.todo}"></span>   todo객체에서 gettodo해 출력해주겠다!!! (todo를 꺼낸다)
+    </li>
+
+</ul>
+</body>
+</html>
